@@ -62,7 +62,7 @@
 		F34396172817D19A00656E99 /* TableSettingsMVC */ = {
 			isa = PBXGroup;
 			children = (
-				F3CB4F6E2817E37100D0C2D7 /* Scenes */,
+				F3CB4F6F281821D000D0C2D7 /* Sources */,
 				F343961E2817D19A00656E99 /* Main.storyboard */,
 				F34396212817D19B00656E99 /* Assets.xcassets */,
 				F34396232817D19B00656E99 /* LaunchScreen.storyboard */,
@@ -108,12 +108,20 @@
 		F3CB4F6E2817E37100D0C2D7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F343962C2817D47400656E99 /* App */,
 				F34396342817D6A400656E99 /* Controller */,
 				F34396392817D71D00656E99 /* Model */,
 				F343963E2817D7D200656E99 /* View */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F3CB4F6F281821D000D0C2D7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F343962C2817D47400656E99 /* App */,
+				F3CB4F6E2817E37100D0C2D7 /* Scenes */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
