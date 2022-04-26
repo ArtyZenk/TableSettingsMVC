@@ -9,56 +9,56 @@ import UIKit
 
 class SettingsView: UIView {
     
-    //  MARK: - Configuration
-    
-    func configureView(with model: [Section]) {
-        self.models = model
-    }
-    
-    // MARK: - Private properties
-    
-    private var models = [Section]()
-    
     //  MARK: - Elements
-        
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.delegate = self
-        tableView.dataSource = self
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         return tableView
     }()
     
-    //  MARK: - Initial
+    //  MARK: - Configuration
+    func configureView(with model: [Section]) {
+        self.models = model
+    }
     
+    private var models = [Section]()
+    
+    
+    //  MARK: - Initial
     init() {
         super.init(frame: .zero)
         setupHierarchy()
-        setupLayots()
+        setupLayout()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-    //  MARK: - Private functions
-    
+}
+
+//  MARK: - Private functions
+extension SettingsView {
     private func setupHierarchy() {
         addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
-    private func setupLayots() {
-        tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
+    private func setupLayout() {
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+        ])
     }
+    
+    
 }
 
 //  MARK: - UITableViewDataSource
-
 extension SettingsView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,9 +82,7 @@ extension SettingsView: UITableViewDataSource {
 }
 
 //  MARK: - UITableViewDelegate
-
 extension SettingsView: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Была нажата ячейка \(models[indexPath.section].option[indexPath.row].title)")

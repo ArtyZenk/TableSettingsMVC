@@ -10,7 +10,6 @@ import UIKit
 class SettingsController: UIViewController {
 
     //  MARK: - Elements
-    
     var model: SettingsModel?
     
     private var settingsView: SettingsView? {
@@ -29,7 +28,6 @@ class SettingsController: UIViewController {
 }
 
 //  MARK: - Configuration
-
 private extension SettingsController {
     func configureView() {
         guard let models = model?.createOptions() else { return }

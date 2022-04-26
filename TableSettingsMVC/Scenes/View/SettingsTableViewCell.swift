@@ -12,7 +12,6 @@ class SettingsTableViewCell: UITableViewCell {
     static let identifier = "SettingsTableViewCell"
     
     //  MARK: - Elements
-    
     private let iconContainer: UIView = {
        let view = UIView()
         view.clipsToBounds = true
@@ -50,7 +49,6 @@ class SettingsTableViewCell: UITableViewCell {
     }()
     
     //  MARK: - Initial
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
@@ -63,7 +61,6 @@ class SettingsTableViewCell: UITableViewCell {
     }
     
     //  MARK: - Private functions
-    
     private func setupHierarchy() {
         contentView.addSubview(label)
         contentView.addSubview(iconContainer)
@@ -103,7 +100,6 @@ class SettingsTableViewCell: UITableViewCell {
     }
     
     //  MARK: - prepareForReuse
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         iconImageView.image = nil
@@ -116,7 +112,6 @@ class SettingsTableViewCell: UITableViewCell {
     }
     
     //  MARK: - Configure
-    
     public func configure(with model: SettingsCellOption) {
         label.text = model.title
         iconImageView.image = model.icon
