@@ -12,7 +12,6 @@ class SettingsView: UIView {
     //  MARK: - Elements
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         return tableView
@@ -31,6 +30,7 @@ class SettingsView: UIView {
         super.init(frame: .zero)
         setupHierarchy()
         setupLayout()
+        setupTable()
     }
     
     required init?(coder: NSCoder) {
@@ -55,7 +55,9 @@ extension SettingsView {
         ])
     }
     
-    
+    private func setupTable() {
+        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
+    }
 }
 
 //  MARK: - UITableViewDataSource
