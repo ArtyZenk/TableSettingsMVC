@@ -22,17 +22,20 @@ class SettingsController: UIViewController {
         view = SettingsView()
         model = SettingsModel()
         configureView()
-        
-        view.backgroundColor = .white
-        navigationItem.title = "Настройки"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        configureNavigationBar()
     }
 }
 
 //  MARK: - Configuration
 private extension SettingsController {
-    func configureView() {
+    private func configureView() {
         guard let models = model?.createOptions() else { return }
         settingsView?.configureView(with: models)
+    }
+    
+    private func configureNavigationBar() {
+        view.backgroundColor = .white
+        navigationItem.title = "Настройки"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
