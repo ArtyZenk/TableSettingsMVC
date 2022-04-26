@@ -12,7 +12,6 @@
 		F34396202817D19A00656E99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F343961E2817D19A00656E99 /* Main.storyboard */; };
 		F34396222817D19B00656E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34396212817D19B00656E99 /* Assets.xcassets */; };
 		F34396252817D19B00656E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34396232817D19B00656E99 /* LaunchScreen.storyboard */; };
-		F34396302817D5E400656E99 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343962F2817D5E400656E99 /* TabBarController.swift */; };
 		F34396332817D67E00656E99 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34396322817D67E00656E99 /* SettingsController.swift */; };
 		F34396362817D6DB00656E99 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34396352817D6DB00656E99 /* SettingsModel.swift */; };
 		F343963B2817D74300656E99 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343963A2817D74300656E99 /* SettingsView.swift */; };
@@ -27,7 +26,6 @@
 		F34396212817D19B00656E99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F34396242817D19B00656E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F34396262817D19B00656E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F343962F2817D5E400656E99 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F34396322817D67E00656E99 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		F34396352817D6DB00656E99 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		F343963A2817D74300656E99 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -82,14 +80,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		F34396312817D5FD00656E99 /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				F343962F2817D5E400656E99 /* TabBarController.swift */,
-			);
-			path = TabBarController;
-			sourceTree = "<group>";
-		};
 		F34396342817D6A400656E99 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				F343962C2817D47400656E99 /* App */,
-				F34396312817D5FD00656E99 /* TabBarController */,
 				F34396342817D6A400656E99 /* Controller */,
 				F34396392817D71D00656E99 /* Model */,
 				F343963E2817D7D200656E99 /* View */,
@@ -202,7 +191,6 @@
 				F343963B2817D74300656E99 /* SettingsView.swift in Sources */,
 				F343963D2817D76800656E99 /* SettingsTableViewCell.swift in Sources */,
 				F34396332817D67E00656E99 /* SettingsController.swift in Sources */,
-				F34396302817D5E400656E99 /* TabBarController.swift in Sources */,
 				F34396192817D19A00656E99 /* AppDelegate.swift in Sources */,
 				F343961B2817D19A00656E99 /* SceneDelegate.swift in Sources */,
 			);

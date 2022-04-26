@@ -23,7 +23,9 @@ class SettingsController: UIViewController {
         model = SettingsModel()
         configureView()
         
-        self.tabBarController?.tabBar.isHidden = true
+        view.backgroundColor = .white
+        navigationItem.title = "Настройки"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 

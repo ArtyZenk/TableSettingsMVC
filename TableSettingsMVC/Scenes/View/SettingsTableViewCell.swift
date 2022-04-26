@@ -36,7 +36,7 @@ class SettingsTableViewCell: UITableViewCell {
     let additionalLabel: UILabel = {
        let label = UILabel()
         label.textAlignment = .right
-        label.textColor = .gray
+        label.textColor = .darkGray
         label.numberOfLines = 1
         return label
     }()
@@ -53,7 +53,8 @@ class SettingsTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupHierarchy()
         setupLayouts()
-        setupContentView()
+        
+        contentView.clipsToBounds = true
     }
     
     required init?(coder: NSCoder) {
@@ -68,9 +69,8 @@ class SettingsTableViewCell: UITableViewCell {
         iconContainer.addSubview(iconImageView)
     }
     
-    private func setupContentView() {
-        contentView.clipsToBounds = true
-    }
+   
+    
     
     private func setupLayouts() {
                 
@@ -116,7 +116,7 @@ class SettingsTableViewCell: UITableViewCell {
         label.text = model.title
         iconImageView.image = model.icon
         iconContainer.backgroundColor = model.iconBackgroundColor
-        additionalLabel.text = model.additionLabel
-        model.isSwitchButton ? (contentView.addSubview(switchElement)) : (accessoryType = .disclosureIndicator)
+        additionalLabel.text = model.label
+        model.isSwitch ? (contentView.addSubview(switchElement)) : (accessoryType = .disclosureIndicator)
     }
 }

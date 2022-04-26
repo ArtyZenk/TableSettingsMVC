@@ -13,7 +13,6 @@ class SettingsView: UIView {
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         return tableView
     }()
     
@@ -23,7 +22,6 @@ class SettingsView: UIView {
     }
     
     private var models = [Section]()
-    
     
     //  MARK: - Initial
     init() {
