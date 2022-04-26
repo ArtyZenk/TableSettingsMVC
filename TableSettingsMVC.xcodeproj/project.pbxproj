@@ -15,6 +15,10 @@
 		F34396252817D19B00656E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34396232817D19B00656E99 /* LaunchScreen.storyboard */; };
 		F34396302817D5E400656E99 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343962F2817D5E400656E99 /* TabBarController.swift */; };
 		F34396332817D67E00656E99 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34396322817D67E00656E99 /* SettingsController.swift */; };
+		F34396362817D6DB00656E99 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34396352817D6DB00656E99 /* SettingsModel.swift */; };
+		F34396382817D70500656E99 /* ModelStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34396372817D70500656E99 /* ModelStructure.swift */; };
+		F343963B2817D74300656E99 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343963A2817D74300656E99 /* SettingsView.swift */; };
+		F343963D2817D76800656E99 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343963C2817D76800656E99 /* SettingsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		F34396262817D19B00656E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F343962F2817D5E400656E99 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F34396322817D67E00656E99 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		F34396352817D6DB00656E99 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		F34396372817D70500656E99 /* ModelStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStructure.swift; sourceTree = "<group>"; };
+		F343963A2817D74300656E99 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F343963C2817D76800656E99 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +75,9 @@
 				F34396212817D19B00656E99 /* Assets.xcassets */,
 				F34396232817D19B00656E99 /* LaunchScreen.storyboard */,
 				F34396262817D19B00656E99 /* Info.plist */,
-				F34396322817D67E00656E99 /* SettingsController.swift */,
+				F34396342817D6A400656E99 /* Controller */,
+				F34396392817D71D00656E99 /* Model */,
+				F343963E2817D7D200656E99 /* View */,
 			);
 			path = TableSettingsMVC;
 			sourceTree = "<group>";
@@ -87,6 +97,32 @@
 				F343962F2817D5E400656E99 /* TabBarController.swift */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		F34396342817D6A400656E99 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F34396322817D67E00656E99 /* SettingsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F34396392817D71D00656E99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F34396352817D6DB00656E99 /* SettingsModel.swift */,
+				F34396372817D70500656E99 /* ModelStructure.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F343963E2817D7D200656E99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F343963A2817D74300656E99 /* SettingsView.swift */,
+				F343963C2817D76800656E99 /* SettingsTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34396362817D6DB00656E99 /* SettingsModel.swift in Sources */,
+				F343963B2817D74300656E99 /* SettingsView.swift in Sources */,
+				F343963D2817D76800656E99 /* SettingsTableViewCell.swift in Sources */,
+				F34396382817D70500656E99 /* ModelStructure.swift in Sources */,
 				F343961D2817D19A00656E99 /* ViewController.swift in Sources */,
 				F34396332817D67E00656E99 /* SettingsController.swift in Sources */,
 				F34396302817D5E400656E99 /* TabBarController.swift in Sources */,
@@ -329,7 +369,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,7 +398,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
