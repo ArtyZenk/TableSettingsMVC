@@ -9,13 +9,13 @@ import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
     
-    static let identifier = "SettingsTableViewCell"
+    static let identifier = Strings.identifierViewCell
     
     //  MARK: - Elements
     private let iconContainer: UIView = {
        let view = UIView()
         view.clipsToBounds = true
-        view.layer.cornerRadius = 8
+        view.layer.cornerRadius = Metric.iconContainerCornerRadius
         view.layer.masksToBounds = true
         return view
     }()
@@ -29,7 +29,7 @@ class SettingsTableViewCell: UITableViewCell {
     
     private let label: UILabel = {
        let label = UILabel()
-        label.numberOfLines = 1
+        label.numberOfLines = Metric.labelNumberOfLines
         return label
     }()
     
@@ -37,7 +37,7 @@ class SettingsTableViewCell: UITableViewCell {
        let label = UILabel()
         label.textAlignment = .right
         label.textColor = .darkGray
-        label.numberOfLines = 1
+        label.numberOfLines = Metric.additionalLabelNumberOfLines
         return label
     }()
     
@@ -69,34 +69,44 @@ class SettingsTableViewCell: UITableViewCell {
         iconContainer.addSubview(iconImageView)
     }
     
-   
-    
-    
     private func setupLayouts() {
                 
         let size: CGFloat = contentView.frame.height - 17
-        iconContainer.frame = CGRect(x: 15, y: 6, width: size, height: size)
+        iconContainer.frame = CGRect(
+            x: Metric.iconContainerXShift,
+            y: Metric.iconContainerYShift,
+            width: size,
+            height: size
+        )
         
         let imageSize: CGFloat = size / 1.2
-        iconImageView.frame = CGRect(x: (size-imageSize) / 2,
-                                     y: (size-imageSize) / 2,
-                                     width: imageSize,
-                                     height: imageSize)
+        iconImageView.frame = CGRect(
+            x: (size-imageSize) / 2,
+            y: (size-imageSize) / 2,
+            width: imageSize,
+            height: imageSize
+        )
         
-        label.frame = CGRect(x: 25 + iconContainer.frame.size.width,
-                             y: 0,
-                             width: contentView.frame.size.width - 25 - iconContainer.frame.size.width,
-                             height: contentView.frame.size.height)
+        label.frame = CGRect(
+            x: Metric.labelXShift + iconContainer.frame.size.width,
+            y: Metric.labelYShift,
+            width: contentView.frame.size.width - Metric.labelWidthShift - iconContainer.frame.size.width,
+            height: contentView.frame.size.height
+        )
         
-        additionalLabel.frame = CGRect(x: (contentView.frame.size.width - contentView.frame.size.width / 1.9),
-                             y: (contentView.frame.size.height / 7),
-                             width: contentView.frame.size.width / 2,
-                             height: iconContainer.frame.size.height)
+        additionalLabel.frame = CGRect(
+            x: (contentView.frame.size.width - contentView.frame.size.width / 2.3),
+            y: (contentView.frame.size.height / 7),
+            width: contentView.frame.size.width / 2,
+            height: iconContainer.frame.size.height
+        )
 
-        switchElement.frame = CGRect(x: (contentView.frame.size.width - switchElement.frame.size.width + 10),
-                            y: (contentView.frame.size.height - switchElement.frame.size.height) / 2,
-                            width: switchElement.frame.size.width,
-                            height: switchElement.frame.size.height)
+        switchElement.frame = CGRect(
+            x: (contentView.frame.size.width - switchElement.frame.size.width + Metric.switchElementXShift),
+            y: (contentView.frame.size.height - switchElement.frame.size.height) / 2,
+            width: switchElement.frame.size.width,
+            height: switchElement.frame.size.height
+        )
     }
     
     //  MARK: - prepareForReuse
@@ -118,5 +128,26 @@ class SettingsTableViewCell: UITableViewCell {
         iconContainer.backgroundColor = model.iconBackgroundColor
         additionalLabel.text = model.label
         model.isSwitch ? (contentView.addSubview(switchElement)) : (accessoryType = .disclosureIndicator)
+    }
+}
+
+extension SettingsTableViewCell {
+    enum Metric {
+        static let iconContainerCornerRadius: CGFloat = 8
+        static let labelNumberOfLines = 1
+        static let additionalLabelNumberOfLines = 1
+        
+        static let iconContainerXShift: CGFloat = 15
+        static let iconContainerYShift: CGFloat = 6
+        
+        static let labelXShift: CGFloat = 25
+        static let labelYShift: CGFloat = 0
+        static let labelWidthShift: CGFloat = 25
+        
+        static let switchElementXShift: CGFloat = 60
+    }
+    
+    enum Strings {
+        static let identifierViewCell = "SettingsTableViewCell"
     }
 }

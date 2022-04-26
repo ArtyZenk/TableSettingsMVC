@@ -108,9 +108,9 @@
 		F3CB4F6E2817E37100D0C2D7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F34396342817D6A400656E99 /* Controller */,
 				F34396392817D71D00656E99 /* Model */,
 				F343963E2817D7D200656E99 /* View */,
+				F34396342817D6A400656E99 /* Controller */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
