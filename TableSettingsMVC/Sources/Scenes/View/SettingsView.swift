@@ -85,6 +85,6 @@ extension SettingsView: UITableViewDataSource {
 extension SettingsView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("Была нажата ячейка \(models[indexPath.section].option[indexPath.row].title)")
+        print("Нажата ячейка \(models[indexPath.section].option[indexPath.row].title)")
     }
 }

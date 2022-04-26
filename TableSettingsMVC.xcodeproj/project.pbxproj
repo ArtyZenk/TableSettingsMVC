@@ -16,6 +16,7 @@
 		F34396362817D6DB00656E99 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34396352817D6DB00656E99 /* SettingsModel.swift */; };
 		F343963B2817D74300656E99 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343963A2817D74300656E99 /* SettingsView.swift */; };
 		F343963D2817D76800656E99 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F343963C2817D76800656E99 /* SettingsTableViewCell.swift */; };
+		F3CB4F7428182B2F00D0C2D7 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB4F7328182B2F00D0C2D7 /* Metric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F34396352817D6DB00656E99 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		F343963A2817D74300656E99 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F343963C2817D76800656E99 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		F3CB4F7328182B2F00D0C2D7 /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				F3CB4F6F281821D000D0C2D7 /* Sources */,
-				F343961E2817D19A00656E99 /* Main.storyboard */,
-				F34396212817D19B00656E99 /* Assets.xcassets */,
-				F34396232817D19B00656E99 /* LaunchScreen.storyboard */,
-				F34396262817D19B00656E99 /* Info.plist */,
+				F3CB4F702818292B00D0C2D7 /* Resources */,
 			);
 			path = TableSettingsMVC;
 			sourceTree = "<group>";
@@ -111,6 +110,7 @@
 				F34396392817D71D00656E99 /* Model */,
 				F343963E2817D7D200656E99 /* View */,
 				F34396342817D6A400656E99 /* Controller */,
+				F3CB4F7528182B5C00D0C2D7 /* Extension */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -122,6 +122,25 @@
 				F3CB4F6E2817E37100D0C2D7 /* Scenes */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		F3CB4F702818292B00D0C2D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F343961E2817D19A00656E99 /* Main.storyboard */,
+				F34396212817D19B00656E99 /* Assets.xcassets */,
+				F34396232817D19B00656E99 /* LaunchScreen.storyboard */,
+				F34396262817D19B00656E99 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3CB4F7528182B5C00D0C2D7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F3CB4F7328182B2F00D0C2D7 /* Metric.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +219,7 @@
 				F343963D2817D76800656E99 /* SettingsTableViewCell.swift in Sources */,
 				F34396332817D67E00656E99 /* SettingsController.swift in Sources */,
 				F34396192817D19A00656E99 /* AppDelegate.swift in Sources */,
+				F3CB4F7428182B2F00D0C2D7 /* Metric.swift in Sources */,
 				F343961B2817D19A00656E99 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9DSLGCL4J8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TableSettingsMVC/Info.plist;
+				INFOPLIST_FILE = TableSettingsMVC/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -379,7 +399,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9DSLGCL4J8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TableSettingsMVC/Info.plist;
+				INFOPLIST_FILE = TableSettingsMVC/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
